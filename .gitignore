@@ -1,0 +1,77 @@
+# =========================
+# OS Generated Files
+# =========================
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# =========================
+# IDEs and Editors
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# =========================
+# C / C++
+# =========================
+# Compiled binaries and object files
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+*.dll
+*.so
+*.dylib
+
+# Build directories (if you start using CMake/Make)
+build/
+bin/
+obj/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+
+# =========================
+# Python
+# =========================
+# Cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env
+.venv/
+ENV/
+
+# Jupyter Notebook (for AI/Data Science)
+.ipynb_checkpoints/
+
+# Other Python tools
+.pytest_cache/
+.mypy_cache/
+
+# =========================
+# Local Test Files (Scratchpads)
+# =========================
+test.cpp
+test.py
+
+# Ignore compiled binaries for test files
+test
+test.exe
+
+# (Optional) Ignore anything starting with "test"
+# test*
