@@ -1,3 +1,7 @@
-# Algorithms & Solutions
+# Algo Practice
 
-This repository contains my personal solutions to various algorithmic problems.
+My personal workspace for Data Structures, Algorithms (DSA), and competitive programming. 
+
+### Tech Stack
+* **C++**: Core data structures and fast algorithms.
+* **Python**: Prototyping and logic training.
