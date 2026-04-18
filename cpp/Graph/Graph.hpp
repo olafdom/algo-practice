@@ -10,8 +10,9 @@ private:
 
 public:
     Graph(int initialNodeCount) : edgeCount(0) {
-        if (nodeCount < 0) throw std::invalid_argument("Node count cannot be negative!");
-        graph.resize(nodeCount);
+        if (initialNodeCount < 0) throw std::invalid_argument("Node count cannot be negative!");
+        nodeCount = initialNodeCount;
+        graph.resize(initialNodeCount);
     }
 
     void addEdge(int a, int b) {

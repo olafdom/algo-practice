@@ -1,6 +1,5 @@
 #pragma once
 #include<vector>
-#include "graph/graph.hpp"
 
 template<typename T>
 class SegmentTree{ //update in point, query on interval
