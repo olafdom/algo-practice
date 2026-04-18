@@ -26,6 +26,6 @@ public:
         return graph[node]; 
     }
 
-    int getNodeCount() const { return nodeCount; }
-    int getEdgeCount() const { return edgeCount; }
+    const int getNodeCount() const { return nodeCount; }
+    const int getEdgeCount() const { return edgeCount; }
 };
