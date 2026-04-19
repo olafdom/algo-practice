@@ -17,7 +17,7 @@ inline void runDfs(const Graph& graph, int initialNode) {
     if(initialNode < 0 || initialNode >= graph.getNodeCount()) throw std::invalid_argument("Node index is out of bounds!");
     std::vector<bool> visited(graph.getNodeCount(), false);
     visited[initialNode] = true;
-    std::cout << "Starting Depth-First-Search: " << std::endl;
+    std::cout << "Starting Depth-First-Search:" << std::endl;
     dfsHelper(graph, initialNode, visited);
     std::cout << "Finished Depth-First-Search" << std::endl;
 }
