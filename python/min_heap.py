@@ -1,19 +1,23 @@
 class MinHeap:
+    @property
     def size(self):
         return len(self.heap)
+    
+    @staticmethod
+    def left_child(idx: int) -> int:
+        return 2 * idx + 1
+    
+    @staticmethod
+    def right_child(idx: int) -> int:
+        return 2 * idx + 2
 
+    @staticmethod
+    def parent(idx: int) -> int:
+        return (idx - 1) // 2
+    
     def swap_indices(self, a: int, b: int) -> None:
         self.heap[a], self.heap[b] = self.heap[b], self.heap[a]
 
-    def left_child(self, idx: int) -> int:
-        return 2 * idx + 1
-
-    def right_child(self, idx: int) -> int:
-        return 2 * idx + 2
-
-    def parent(self, idx: int) -> int:
-        return (idx - 1) // 2
-    
     def heapify_up(self, idx: int) -> None:
         while idx > 0 and self.heap[idx] < self.heap[self.parent(idx)]:
             self.swap_indices(idx, self.parent(idx))
@@ -22,9 +26,9 @@ class MinHeap:
     def heapify_down(self, idx: int) -> None:
         smallest = idx
 
-        if self.left_child(idx) < self.size() and self.heap[self.left_child(idx)] < self.heap[smallest]:
+        if self.left_child(idx) < self.size and self.heap[self.left_child(idx)] < self.heap[smallest]:
             smallest = self.left_child(idx)
-        if self.right_child(idx) < self.size() and self.heap[self.right_child(idx)] < self.heap[smallest]:
+        if self.right_child(idx) < self.size and self.heap[self.right_child(idx)] < self.heap[smallest]:
             smallest = self.right_child(idx)
 
         if idx != smallest:
@@ -33,13 +37,13 @@ class MinHeap:
     
     def insert(self, val) -> None:
         self.heap.append(val)
-        self.heapify_up(self.size() - 1)
+        self.heapify_up(self.size - 1)
 
     def pop(self) -> int:
         if(not self.heap):
             raise ValueError("Heap is empty")
         
-        self.swap_indices(0, self.size() - 1)
+        self.swap_indices(0, self.size - 1)
         ret = self.heap.pop()
 
         if self.heap:
