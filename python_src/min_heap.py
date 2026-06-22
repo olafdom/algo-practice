@@ -19,9 +19,13 @@ class MinHeap:
         self.heap[a], self.heap[b] = self.heap[b], self.heap[a]
 
     def heapify_up(self, idx: int) -> None:
-        while idx > 0 and self.heap[idx] < self.heap[self.parent(idx)]:
-            self.swap_indices(idx, self.parent(idx))
-            idx = self.parent(idx)
+        while idx > 0:
+            p_idx = self.parent(idx)
+            if self.heap[idx] < self.heap[p_idx]:
+                self.swap_indices(idx, p_idx)
+                idx = p_idx
+            else:
+                break
 
     def heapify_down(self, idx: int) -> None:
         smallest = idx
@@ -39,7 +43,7 @@ class MinHeap:
         self.heap.append(val)
         self.heapify_up(self.size - 1)
 
-    def pop(self) -> int:
+    def pop(self):
         if(not self.heap):
             raise ValueError("Heap is empty")
         
