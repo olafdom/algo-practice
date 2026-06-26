@@ -15,6 +15,9 @@ class MinHeap:
     def parent(idx: int) -> int:
         return (idx - 1) // 2
     
+    def __len__(self):
+        return self.size
+    
     def swap_indices(self, a: int, b: int) -> None:
         self.heap[a], self.heap[b] = self.heap[b], self.heap[a]
 
